@@ -3,13 +3,13 @@
 import argparse
 import io
 import os
+from google.cloud import videointelligence
 # Value for the credentials json Path
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./credentials/google_cred.json"
 
 
 def video_detect_text(path, topn: int):
     """Detect text in a local video."""
-    from google.cloud import videointelligence
 
     video_client = videointelligence.VideoIntelligenceServiceClient()
     features = [videointelligence.Feature.TEXT_DETECTION]

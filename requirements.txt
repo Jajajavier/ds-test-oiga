@@ -1,0 +1,2 @@
+pytube==10.5.3
+google-cloud-videointelligence==2.0.0
